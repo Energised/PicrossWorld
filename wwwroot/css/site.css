@@ -16,3 +16,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* Picross App */
+
+.square {
+  width: 50px;
+  height: 50px;
+  border: 5px black;
+  background-color: grey;
+}
