@@ -17,6 +17,14 @@ body {
   margin-bottom: 60px;
 }
 
+.top-bar-image{
+  background-image: url("../img/banner.jpg");
+}
+
+.picross-world-title{
+  background-image: url("../img/picross-world-title.png");
+}
+
 /* Picross App */
 
 .square {
