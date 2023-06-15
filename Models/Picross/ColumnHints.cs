@@ -1,1 +1,0 @@
-namespace PicrossWorld.Models.Picross;

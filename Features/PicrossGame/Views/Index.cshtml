@@ -1,0 +1,13 @@
+@using System.Text.Json
+@model PicrossWorld.Models.Picross.PicrossGame;
+
+@{
+    ViewData["Title"] = "PicrossGame";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<board
+    :width="@Model.Board.Width"
+    :height="@Model.Board.Height"
+    :board="@JsonSerializer.Serialize(Model.Board)">
+</board>

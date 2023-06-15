@@ -1,3 +1,5 @@
+using PicrossWorld.Features.PicrossGenerator;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +7,8 @@ builder.Services.AddControllersWithViews()
                 .AddRazorOptions(options => {
                     options.ViewLocationFormats.Add("/Features/{1}/Views/{0}.cshtml");
 });
+
+builder.Services.AddScoped<PicrossGenerator>();
 
 var app = builder.Build();
 

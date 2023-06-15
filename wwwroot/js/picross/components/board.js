@@ -8,7 +8,23 @@ export default {
         height:{
             type: Number,
             required: true
+        },
+        board:{
+            type: Object,
+            required: true
         }
+    },
+    methods:{
+      saveBoardState(){
+          $.ajax({
+              url: "PicrossGame/Save",
+              data: this.board,
+              type: "POST",
+              success(){
+                  console.log("Success!");
+              }
+          });
+      }  
     },
     template: `
     
@@ -25,6 +41,7 @@ export default {
                 </template>
             </tr>
         </template>
+        <button type="button" @click="saveBoardState()">Save</button>
     </table>
     
     `
