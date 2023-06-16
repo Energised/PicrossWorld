@@ -16,9 +16,9 @@ public class PicrossGameController : Controller
         _generator = generator;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        var game = _generator.Generate();
+        var game = await _generator.Generate(10, 10);
         return View(game);
     }
 

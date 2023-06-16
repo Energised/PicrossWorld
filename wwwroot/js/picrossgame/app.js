@@ -13,6 +13,10 @@ const app = Vue.createApp({
     computed:{
 
     }
+    // components:{
+    //     square: import("./components/square.js"),
+    //     board: import("./components/board.js")
+    // }
 });
 
 app.component('square', square);
